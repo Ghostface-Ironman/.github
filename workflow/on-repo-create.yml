@@ -1,0 +1,12 @@
+name: On Repository Created
+
+on:
+  repository:
+    types: [created]
+
+jobs:
+  do-something:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print repo info
+        run: echo "Repository ${{ github.event.repository.name }} was created."
